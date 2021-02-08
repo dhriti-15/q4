@@ -1,0 +1,16 @@
+def divisor(n):
+  for i in range(n):
+    x = len([i for i in range(1,n+1) if not n % i])
+  return x
+#sum of actual divisors
+def sum_div(number):
+    divisors = [1]
+    for i in range(2, number):
+        if (number % i)==0:
+            divisors.append(i)
+    return sum(divisors)
+
+print(divisor(42))
+print(divisor(147))
+print(sum_div(42))
+print(sum_div(147))
